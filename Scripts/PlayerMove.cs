@@ -53,15 +53,6 @@ public class PlayerMove : MonoBehaviour {
 
 		}
 	}
-	
-	public void Spin(float rotAmount, bool isDead) {
-		if (isDead) {
-			StartCoroutine (SpinPlayer());
-		} else {
-			if (!isSpinning)
-				StartCoroutine (SpinPlayerOnce (rotAmount));
-		}
-	}
 
 	IEnumerator SpinPlayerOnce(float rotAmount) {
 		while (rotAmount > rotation) {
